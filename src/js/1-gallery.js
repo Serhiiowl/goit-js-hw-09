@@ -69,25 +69,20 @@ const images = [
 ];
 
 
+
 function createGalleryItems(images) {
   const gallery = document.querySelector('.gallery');
   images.forEach(image => {
-    const listItem = document.createElement('li');
-    listItem.classList.add('gallery-item');
-
-    const link = document.createElement('a');
-    link.classList.add('gallery-link');
-    link.href = image.original;
-    link.setAttribute('data-caption', image.description);
-
-    const img = document.createElement('img');
-    img.classList.add('gallery-image');
-    img.src = image.preview;
-    img.alt = image.description;
-
-    link.appendChild(img);
-    listItem.appendChild(link);
-    gallery.appendChild(listItem);
+    gallery.innerHTML += `
+      <li class="gallery-item">
+        <a class="gallery-link" href="${image.original}">
+          <img 
+            class="gallery-image" 
+            src="${image.preview}" 
+            alt="${image.description}" 
+          />
+        </a>
+      </li>`;
   });
 }
 
