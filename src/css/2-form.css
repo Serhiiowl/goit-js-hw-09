@@ -1,0 +1,68 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+    /* Ширина форми */
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.feedback-form label,
+.feedback-form input,
+.feedback-form textarea,
+.feedback-form button {
+    margin-bottom: 16px;
+    /* Відстань між полями */
+    width: 100%;
+    /* Ширина елементів форми */
+}
+
+.feedback-form input[type="email"],
+.feedback-form textarea {
+    border-radius: 8px;
+    /* Заокруглення полів */
+    border: 1px solid #808080;
+    /* Колір рамки полів */
+    padding: 8px;
+    /* Внутрішній відступ для полів */
+}
+
+.feedback-form input[type="email"]:hover,
+.feedback-form textarea:hover {
+    border-color: #000000;
+    /* Колір рамки при ховері */
+}
+
+.feedback-form button {
+    height: 40px;
+    /* Висота кнопки */
+    width: 96px;
+    /* Ширина кнопки */
+    border-radius: 8px;
+    /* Заокруглення кнопки */
+    background-color: #4E75FF;
+    /* Колір кнопки */
+    color: white;
+    /* Колір тексту кнопки */
+    padding: 0;
+    /* Внутрішній відступ кнопки */
+    border: none;
+    /* Відсутність рамки кнопки */
+    cursor: pointer;
+    /* Курсор у вигляді руки при наведенні */
+    align-self: flex-start;
+    /* Вирівнювання кнопки до лівого краю */
+}
+
+.feedback-form button:hover {
+    background-color: #6C8CFF;
+    /* Колір кнопки при ховері */
+}
