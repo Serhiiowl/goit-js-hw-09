@@ -72,8 +72,9 @@ const images = [
 
 function createGalleryItems(images) {
   const gallery = document.querySelector('.gallery');
+  let galleryHTML = '';
   images.forEach(image => {
-    gallery.innerHTML += `
+    galleryHTML += `
       <li class="gallery-item">
         <a class="gallery-link" href="${image.original}">
           <img 
@@ -84,17 +85,13 @@ function createGalleryItems(images) {
         </a>
       </li>`;
   });
+  gallery.innerHTML = galleryHTML;
 }
-
 
 document.addEventListener('DOMContentLoaded', () => {
   createGalleryItems(images);
-  new SimpleLightbox('.gallery a', { captions: true,
-  captionSelector: 'img', 
-  captionType: 'attr', 
+  new SimpleLightbox('.gallery a', {
   captionsData: 'alt', 
-  captionPosition: 'bottom', 
   captionDelay: 250, 
-  enableKeyboard: true, 
-  loop: true  });
+   });
 });
