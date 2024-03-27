@@ -1,4 +1,4 @@
-body {
+.form-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,7 +10,6 @@ body {
     display: flex;
     flex-direction: column;
     width: 360px;
-    /* Ширина форми */
     padding: 16px;
     box-sizing: border-box;
 }
